@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
       provideStorage(() => getStorage()),
       provideMessaging(() => getMessaging())
     ),
-    provideRouter(routes)
+    provideRouter(routes), provideFirebaseApp(() => initializeApp({"projectId":"f2project-d18af","appId":"1:463429278388:web:66b4ea9900e132a54215e1","storageBucket":"f2project-d18af.appspot.com","locationId":"us-central","apiKey":"AIzaSyB2mCwvjAb04a7AKAvEuG7ixMZyfilXP2Y","authDomain":"f2project-d18af.firebaseapp.com","messagingSenderId":"463429278388"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideMessaging(() => getMessaging()), provideStorage(() => getStorage())
   ],
 };
