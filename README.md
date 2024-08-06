@@ -1,5 +1,5 @@
 # Friendlychat
-
+from: https://firebase.google.com/codelabs/firebase-web#11 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
 ## Development server
