@@ -219,7 +219,8 @@ requestNotificationsPermissions = async () => {
   //saveMessagingDeviceToken = async () => {};
   // Saves the messaging device token to Cloud Firestore.
   saveMessagingDeviceToken= async () => {
-  try {
+    console.log('save device token...');
+    try {
     const currentToken = await getToken(this.messaging);
     if (currentToken) {
       console.log('Got FCM device token:', currentToken);
