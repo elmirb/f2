@@ -10,33 +10,8 @@ import {
   User,
 } from '@angular/fire/auth';
 import { map, switchMap, firstValueFrom, filter, Observable, Subscription } from 'rxjs';
-import {
-  doc,
-  docData,
-  DocumentReference,
-  Firestore,
-  getDoc,
-  setDoc,
-  updateDoc,
-  collection,
-  addDoc,
-  deleteDoc,
-  collectionData,
-  Timestamp,
-  serverTimestamp,
-  query,
-  orderBy,
-  limit,
-  onSnapshot,
-  DocumentData,
-  FieldValue,
-} from '@angular/fire/firestore';
-import {
-  Storage,
-  getDownloadURL,
-  ref,
-  uploadBytesResumable,
-} from '@angular/fire/storage';
+import {  doc,  docData,  DocumentReference,Firestore,  getDoc,  setDoc,  updateDoc,  collection,  addDoc,  deleteDoc,  collectionData,  Timestamp,  serverTimestamp,  query,  orderBy,  limit,  onSnapshot,  DocumentData,  FieldValue,} from '@angular/fire/firestore';
+import {Storage,getDownloadURL,ref,uploadBytesResumable,} from '@angular/fire/storage';
 import { getToken, Messaging, onMessage } from '@angular/fire/messaging';
 import { Router } from '@angular/router';
 
@@ -48,8 +23,6 @@ type ChatMessage = {
   text?: string,
   imageUrl?: string
 };
-
-
 @Injectable({
   providedIn: 'root',
 })
@@ -200,6 +173,11 @@ saveImageMessage = async(file: any) => {
   ) {
     return null;
   }
+
+  requestTest = async () => {
+    console.log('Requesting test...');
+  }
+  
   // Requests permissions to show notifications.
   //requestNotificationsPermissions = async () => {};
   // Requests permissions to show notifications.
@@ -243,5 +221,5 @@ requestNotificationsPermissions = async () => {
   } catch(error) {
     console.error('Unable to get messaging token.', error);
   };
-  }
+   }
 }

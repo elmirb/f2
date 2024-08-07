@@ -6,7 +6,7 @@
                 @if (user$ | async; as user) {
                     <div class="flex flex-nowrap gap-4" [class.flex-row-reverse]="user.uid === message['uid']">
                             <img class="w-10 h-10 rounded-full" [src]="message['profilePicUrl']"
-                                [alt]="message['name']" />
+                                [alt]="message['name']" /> 
                         <div class="flex flex-wrap gap-1 text-neutral-800" [class.flex-row-reverse]="user.uid === message['uid']">
                                 <div class="p-4 rounded-lg max-w-xl flex flex-col justify-between gap-1" [class.bg-amber-200]="user.uid === message['uid']" [class.bg-white]="user.uid !== message['uid']">
                             @if (message['text'] && message['text'].length > 0){
@@ -60,6 +60,8 @@
             <button class="w-16 h-16 rounded-full bg-amber-800 my-3" (click)="this.sendTextMessage()">
                 <img class="w-16 h-16" src="../../../assets/send.svg" alt="Send message" />
             </button>
+            <button (click)="notifyMe()">Notify me!</button>
+
         </div>
     </div>
 </div>
