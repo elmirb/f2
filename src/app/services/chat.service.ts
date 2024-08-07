@@ -196,7 +196,9 @@ export class ChatService {
     console.log('save device token...');
     try {
       const currentToken = await getToken(this.messaging);
+      // const currentToken = await getToken({vapidKey: "BK3Y6uzP03qj9Ug0-GniIDM4gfXN9beyh_Z-e4JSv5yWVvJY-kGf2wxsCe6BC8uDvnZwyDqLrfaSPAtJT8ZsDGQ"});
       // const currentToken = await getToken(this.messaging,{vapidKey: "BK3Y6uzP03qj9Ug0-GniIDM4gfXN9beyh_Z-e4JSv5yWVvJY-kGf2wxsCe6BC8uDvnZwyDqLrfaSPAtJT8ZsDGQ"});
+      console.log("token is:"+currentToken);
       if (currentToken) {
         console.log('Got FCM device token:', currentToken);
         // Saving the Device Token to Cloud Firestore.
